@@ -1,0 +1,14 @@
+@use 'sass:map';
+
+@use './common/fonts';
+@use './common/colors' as vars;
+@use './common/breakpoints' as bp;
+
+* * {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    @extend %fontMain;
+}
