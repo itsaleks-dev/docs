@@ -5,6 +5,8 @@
 @use '../common/mixins' as mixin;
 @use '../common/breakpoints' as bp;
 
+
+
 .content-tags {
     margin-top: 35px;
 
@@ -19,6 +21,9 @@
     @media (max-width: map.get(bp.$grid-breakpoints, xs)) {
         margin-top: 15px;
     }
+    @media (max-width: map.get(bp.$grid-breakpoints, s)) {
+        @include mixin.leftRight;
+    }
 }
 
 .tags {
@@ -26,6 +31,10 @@
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+
+    @media (max-width: map.get(bp.$grid-breakpoints, s)) {
+        gap: 10px;
+    }
 
     &__link {
         display: flex;
@@ -53,7 +62,7 @@
         }
 
         @media (max-width: map.get(bp.$grid-breakpoints, s)) {
-            width: 146px;
+            width: 48%;
         }
 
         &--active {
@@ -84,8 +93,13 @@
             margin-top: 10px;
             font-size: 16px;
             font-weight: 400;
-            letter-spacing: 0.6px;
+            letter-spacing: 0.4px;
             color: vars.$black;
+
+            @media (max-width: map.get(bp.$grid-breakpoints, md)) {
+                margin-top: 5px;
+                font-size: 12px;
+            }
         }
     }
 }
