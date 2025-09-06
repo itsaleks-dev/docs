@@ -37,6 +37,7 @@
     }
 
     &__link {
+        position: relative;
         display: flex;
         flex-direction: column;
         width: 240px;
@@ -90,6 +91,9 @@
         }
 
         &--text {
+            position: absolute;
+            top: 30%;
+            left: 10px;
             margin-top: 10px;
             font-size: 16px;
             font-weight: 400;
