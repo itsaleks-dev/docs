@@ -1,0 +1,91 @@
+@use 'sass:map';
+
+@use '../common/fonts';
+@use '../common/colors' as vars;
+@use '../common/mixins' as mixin;
+@use '../common/breakpoints' as bp;
+
+.content-tags {
+    margin-top: 35px;
+
+    @media (max-width: map.get(bp.$grid-breakpoints, md)) {
+        margin-top: 25px;
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, sm)) {
+        margin-top: 20px;
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, xs)) {
+        margin-top: 15px;
+    }
+}
+
+.tags {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        width: 240px;
+
+        @media (max-width: map.get(bp.$grid-breakpoints, xl)) {
+            width: 223px;
+        }
+
+        @media (max-width: map.get(bp.$grid-breakpoints, lg)) {
+            width: 196px;
+        }
+
+        @media (max-width: map.get(bp.$grid-breakpoints, md)) {
+            width: 241px;
+        }
+
+        @media (max-width: map.get(bp.$grid-breakpoints, sm)) {
+            width: 242px;
+        }
+
+        @media (max-width: map.get(bp.$grid-breakpoints, xs)) {
+            width: 230px;
+        }
+
+        @media (max-width: map.get(bp.$grid-breakpoints, s)) {
+            width: 146px;
+        }
+
+        &--active {
+            @media (max-width: map.get(bp.$grid-breakpoints, md)) {
+                display: none;
+            }
+        }
+
+        &--inactive {
+            @media (max-width: map.get(bp.$grid-breakpoints, sm)) {
+                display: none;
+            }
+        }
+
+        &--disable {
+            @media (max-width: map.get(bp.$grid-breakpoints, xs)) {
+                display: none;
+            }
+        }
+
+        &--image {
+            display: block;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        &--text {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 0.6px;
+            color: vars.$black;
+        }
+    }
+}
