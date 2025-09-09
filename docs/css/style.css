@@ -213,7 +213,6 @@ body {
   .footer {
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 }
 
@@ -227,19 +226,19 @@ body {
 }
 .footer-info__phone {
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.5px;
   color: #000000;
 }
 .footer-info__mail {
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.5px;
   color: #000000;
 }
 .footer-info__work {
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.5px;
   color: #000000;
 }
